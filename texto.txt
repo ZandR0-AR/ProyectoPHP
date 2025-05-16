@@ -1,0 +1,35 @@
+ tbla -> agencias 
+atributos -> nombre, teléfono, ciudad
+dirección, horario de atención,correo,
+foto, latitd , longitud
+
+tbla -> cajeros
+atributos -> provincia, ciudad, numero_serie, *relacion con agencia ( agencia_id ) *,
+estado, latitud longitud. 
+
+tbla --> corresponsales
+atributos -> nombre, direccion,provincia,ciudad, comision, foto,**relacion con agencia**, latitud,longitud.  
+
+
+<tbody>
+                <?php foreach ($agencias as $agencia) : ?>
+                    <tr>
+                        <td class="px-4 py-3"><?= $agencia['id_agencia']; ?></td>
+                        <td class="px-4 py-3"><?= $agencia['nombre']; ?></td>
+                        <td class="px-4 py-3"><?= $agencia['telefono']; ?></td>
+                        <td class="px-4 py-3"><?= $agencia['ciudad']; ?></td>
+                        <td class="px-4 py-3"><?= $agencia['direccion']; ?></td>
+                        <td class="px-4 py-3"><?= $agencia['horario_atencion']; ?></td>
+                        <td class="px-4 py-3"><?= $agencia['correo']; ?></td>
+                        <td class="px-4 py-3">
+                            <?php if (!empty($agencia['foto'])): ?>
+                                <img src="<?= base_url('uploads/agencias/' . $agencia['foto']); ?>" alt="Foto" class="w-16 h-16 rounded-lg shadow-md">
+                            <?php else: ?>
+                                <span class="text-gray-500">N/A</span>
+                            <?php endif; ?>
+                        </td>
+                        <td class="px-4 py-3"><?= $agencia['latitud']; ?></td>
+                        <td class="px-4 py-3"><?= $agencia['longitud']; ?></td>
+                    </tr>
+                    <?php endforeach; ?>
+            </tbody>

@@ -1,0 +1,17 @@
+/* assets/css/styles.css */
+
+.btn-tailwind {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-tailwind:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(144, 5, 5, 0.2);
+}
+
+/* assets/css/styles.css */
+#map {
+    border-radius: 12px;
+    height: 600px;
+    margin-bottom: 20px;
+}
