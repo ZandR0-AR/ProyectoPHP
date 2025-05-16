@@ -182,7 +182,7 @@
         </div>
       </aside>
 
-      <!-- Mobile sidebar -->
+      <!-- Mobileeeeee sidebar -->
       <!-- Backdrop -->
       <div
         x-show="isSideMenuOpen"
